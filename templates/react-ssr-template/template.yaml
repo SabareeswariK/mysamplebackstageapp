@@ -14,7 +14,7 @@ spec:
       properties:
         name:
           type: string
-          title: Project name
+          title: Project data
         description: 
           type: string
           title: Project description
