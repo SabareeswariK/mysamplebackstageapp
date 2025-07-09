@@ -1,0 +1,28 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: react-app-template
+  title: Create a React App
+  description: Scaffold a new React frontend app
+spec:
+  owner: team-frontend
+  type: website
+  parameters:
+    - title: Provide your project info
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          title: Project name
+  steps:
+    - id: fetch
+      name: Fetch template
+      action: fetch:template
+      input:
+        url: ./skeleton
+    - id: publish
+      name: Publish to GitHub
+      action: debug:log
+      input:
+        message: "Pretending to publish repo ${{ parameters.name }}"
