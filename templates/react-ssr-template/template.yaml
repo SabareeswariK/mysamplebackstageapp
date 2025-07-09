@@ -15,8 +15,9 @@ spec:
         name:
           type: string
           title: Project name
+        description: 
           type: string
-          title: Project name
+          title: Project description
   steps:
     - id: fetch
       name: Fetch template
