@@ -25,7 +25,7 @@ spec:
       name: Publish to GitHub
       action: publish:github
       input:
-        repoUrl: github.com?repo=${{ parameters.name }}&owner=SabareeswariK&branch=feature%2Fsample2
+        repoUrl: github.com?repo=${{ parameters.name }}&owner=SabareeswariK
         title: ${{ parameters.name }}
         description: New React App created from template
         visibility: public
