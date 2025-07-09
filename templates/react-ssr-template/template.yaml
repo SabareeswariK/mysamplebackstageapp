@@ -15,6 +15,9 @@ spec:
         name:
           type: string
           title: Project name
+        description:
+          type: string
+          title: Project description
   steps:
     - id: fetch
       name: Fetch template
@@ -23,6 +26,9 @@ spec:
         url: ./skeleton
     - id: publish
       name: Publish to GitHub
-      action: debug:log
+      action: publish:github
       input:
-        message: "Pretending to publish repo ${{ parameters.name }}"
+        repoUrl: github.com?repo=${{ parameters.name }}&owner=SabareeswariK&branch=feature/sample2
+        title: ${{ parameters.name }}
+        description: ${{ parameters.description }}
+        visibility: public

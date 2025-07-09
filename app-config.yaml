@@ -12,6 +12,9 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
+  reading:
+    allow:
+      - host: raw.githubusercontent.com
   baseUrl: http://localhost:7007
   listen:
     port: 7007
@@ -76,7 +79,7 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location]
+    - allow: [Component, System, API, Resource, Location,template]
   locations:
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
